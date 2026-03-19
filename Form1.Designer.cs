@@ -18,7 +18,7 @@ namespace EchoMessenger
         private void InitializeComponent()
         {
             lblTitle = new Label();
-            lstMessages = new ListBox();
+            tboListBox = new ListBox();
             txtInput = new TextBox();
             btnSend = new Button();
             SuspendLayout();
@@ -36,20 +36,20 @@ namespace EchoMessenger
             lblTitle.Text = "Echo Messenger";
             lblTitle.Click += lblTitle_Click;
             // 
-            // lstMessages
+            // tboListBox
             // 
-            lstMessages.Font = new Font("맑은 고딕", 11F);
-            lstMessages.Location = new Point(40, 149);
-            lstMessages.Margin = new Padding(6, 6, 6, 6);
-            lstMessages.Name = "lstMessages";
-            lstMessages.Size = new Size(1116, 604);
-            lstMessages.TabIndex = 1;
+            tboListBox.Font = new Font("맑은 고딕", 11F);
+            tboListBox.Location = new Point(40, 149);
+            tboListBox.Margin = new Padding(6);
+            tboListBox.Name = "tboListBox";
+            tboListBox.Size = new Size(1116, 604);
+            tboListBox.TabIndex = 1;
             // 
             // txtInput
             // 
             txtInput.Font = new Font("맑은 고딕", 11F);
             txtInput.Location = new Point(40, 832);
-            txtInput.Margin = new Padding(6, 6, 6, 6);
+            txtInput.Margin = new Padding(6);
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(856, 47);
             txtInput.TabIndex = 2;
@@ -60,7 +60,7 @@ namespace EchoMessenger
             btnSend.BackColor = Color.Lime;
             btnSend.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
             btnSend.Location = new Point(920, 821);
-            btnSend.Margin = new Padding(6, 6, 6, 6);
+            btnSend.Margin = new Padding(6);
             btnSend.Name = "btnSend";
             btnSend.Size = new Size(240, 85);
             btnSend.TabIndex = 3;
@@ -75,10 +75,10 @@ namespace EchoMessenger
             BackColor = Color.LightYellow;
             ClientSize = new Size(1240, 960);
             Controls.Add(lblTitle);
-            Controls.Add(lstMessages);
+            Controls.Add(tboListBox);
             Controls.Add(txtInput);
             Controls.Add(btnSend);
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "Form1";
             Text = "Echo Messenger";
             ResumeLayout(false);
@@ -88,7 +88,7 @@ namespace EchoMessenger
         #endregion
 
         private Label lblTitle;
-        private ListBox lstMessages;
+        private ListBox tboListBox;
         private TextBox txtInput;
         private Button btnSend;
     }

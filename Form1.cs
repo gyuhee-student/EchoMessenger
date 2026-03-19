@@ -5,12 +5,13 @@ namespace EchoMessenger
         public Form1()
         {
             InitializeComponent();
+            this.Shown += (s, e) => txtInput.Focus();
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
             string typed_msg = txtInput.Text;
-            lstMessages.Items.Add(typed_msg);
+            tboListBox.Items.Add(typed_msg);
             txtInput.Clear();
         }
 
