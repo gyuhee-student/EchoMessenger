@@ -10,10 +10,12 @@ namespace EchoMessenger
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            string typed_msg = txtInput.Text;
+            string typed_msg = txtInput.Text.Trim();
             if (string.IsNullOrWhiteSpace(typed_msg))
                 return;
-            tboListBox.Items.Add(typed_msg);
+            string time_stamp = DateTime.Now.ToString("HH:mm:ss");
+            tboListBox.Items.Add($"[{time_stamp}] {typed_msg}");
+            lblCount.Text = $"현재 대화: {tboListBox.Items.Count}개";
             txtInput.Clear();
             txtInput.Focus();
         }

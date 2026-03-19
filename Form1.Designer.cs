@@ -19,6 +19,7 @@ namespace EchoMessenger
         {
             lblTitle = new Label();
             tboListBox = new ListBox();
+            lblCount = new Label();
             txtInput = new TextBox();
             btnSend = new Button();
             SuspendLayout();
@@ -45,7 +46,15 @@ namespace EchoMessenger
             tboListBox.Size = new Size(1116, 604);
             tboListBox.TabIndex = 1;
             tboListBox.SelectedIndexChanged += tboListBox_SelectedIndexChanged;
-            // 
+            //
+            // lblCount
+            //
+            lblCount.AutoSize = true;
+            lblCount.Font = new Font("맑은 고딕", 10F);
+            lblCount.Location = new Point(40, 770);
+            lblCount.Name = "lblCount";
+            lblCount.Text = "현재 대화: 0개";
+            //
             // txtInput
             // 
             txtInput.Font = new Font("맑은 고딕", 11F);
@@ -77,6 +86,7 @@ namespace EchoMessenger
             ClientSize = new Size(1240, 960);
             Controls.Add(lblTitle);
             Controls.Add(tboListBox);
+            Controls.Add(lblCount);
             Controls.Add(txtInput);
             Controls.Add(btnSend);
             Margin = new Padding(6);
@@ -90,6 +100,7 @@ namespace EchoMessenger
 
         private Label lblTitle;
         private ListBox tboListBox;
+        private Label lblCount;
         private TextBox txtInput;
         private Button btnSend;
     }
