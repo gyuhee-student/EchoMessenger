@@ -13,5 +13,18 @@ namespace EchoMessenger
             lstMessages.Items.Add(typed_msg);
             txtInput.Clear();
         }
+
+        private void txtInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSend_Click(sender, e);
+            }
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
