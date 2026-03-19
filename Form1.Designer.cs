@@ -26,7 +26,7 @@ namespace EchoMessenger
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Georgia", 20F, FontStyle.Bold);
+            lblTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblTitle.ForeColor = Color.Blue;
             lblTitle.Location = new Point(40, 43);
             lblTitle.Margin = new Padding(6, 0, 6, 0);
