@@ -31,7 +31,7 @@ namespace EchoMessenger
             lblTitle.Location = new Point(40, 43);
             lblTitle.Margin = new Padding(6, 0, 6, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(480, 62);
+            lblTitle.Size = new Size(440, 72);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Echo Messenger";
             lblTitle.Click += lblTitle_Click;
@@ -44,6 +44,7 @@ namespace EchoMessenger
             tboListBox.Name = "tboListBox";
             tboListBox.Size = new Size(1116, 604);
             tboListBox.TabIndex = 1;
+            tboListBox.SelectedIndexChanged += tboListBox_SelectedIndexChanged;
             // 
             // txtInput
             // 

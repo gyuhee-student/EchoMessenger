@@ -11,8 +11,11 @@ namespace EchoMessenger
         private void btnSend_Click(object sender, EventArgs e)
         {
             string typed_msg = txtInput.Text;
+            if (string.IsNullOrWhiteSpace(typed_msg))
+                return;
             tboListBox.Items.Add(typed_msg);
             txtInput.Clear();
+            txtInput.Focus();
         }
 
         private void txtInput_KeyDown(object sender, KeyEventArgs e)
@@ -24,6 +27,11 @@ namespace EchoMessenger
         }
 
         private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tboListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
